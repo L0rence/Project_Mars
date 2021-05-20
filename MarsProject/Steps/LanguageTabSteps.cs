@@ -17,7 +17,7 @@ namespace MarsProject.Steps
         private readonly IWebDriver driver;
         private LanguagePage languagePage;  // Login Page take the driver 
         private LoginPage loginPage;
-        //private ProfilePage profilePage;
+        private ProfilePage profilePage;
         // ############# Create a Constructor #############
 
         public LanguageTabSteps()
@@ -26,7 +26,7 @@ namespace MarsProject.Steps
             driver = new ChromeDriver();
             languagePage = new LanguagePage(driver);
             loginPage = new LoginPage(driver);
-            //profilePage = new ProfilePage(driver);
+            profilePage = new ProfilePage(driver);
 
         }
 
@@ -40,19 +40,18 @@ namespace MarsProject.Steps
         [Given(@"I am logged in")]
         public void GivenIAmLoggedIn()
         {
-            loginPage.navigateToLoginPage();
-            //loginPage.login(null, null);
+           loginPage.login(null, null);
             Console.WriteLine("I am logged in");
         }
 
-        //[Given(@"I am at the language tab")]
-        //public void GivenIAmAtTheLanguageTab()
-        //{
-        //    profilePage.navigateToLanguage(driver);
-        //    bool IsAtLangTab = languagePage.validateLanguageTitle();
-        //    Assert.IsTrue(IsAtLangTab);
-        //    Console.WriteLine("I am at the language tab");  
-        //}
+        [Given(@"I am at the language tab")]
+         public void GivenIAmAtTheLanguageTab()
+         {
+             profilePage.navigateToLanguage(driver);
+           bool IsAtLangTab = languagePage.validateLanguageTitle();
+             Assert.IsTrue(IsAtLangTab);
+            Console.WriteLine("I am at the language tab");  
+         }
 
         [Given(@"I click add new button for the language")]
         public void GivenIClickAddNewButtonForTheLanguage()

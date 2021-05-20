@@ -16,6 +16,7 @@ namespace MarsProject.Steps
         //private LanguagePage languagePage;  // Login Page take the driver 
         private LoginPage loginPage;
         private SkillsPage skillsPage;
+        private ProfilePage profilePage;
         // ############# Create a Constructor #############
 
         public SkillTabSteps()
@@ -24,7 +25,9 @@ namespace MarsProject.Steps
             driver = new ChromeDriver();
             loginPage = new LoginPage(driver);
             skillsPage = new SkillsPage(driver);
-          
+            profilePage = new ProfilePage(driver);
+
+
         }
         [AfterScenario]
         public void RunAfterEveryTest()
@@ -36,8 +39,7 @@ namespace MarsProject.Steps
         [Given(@"I am logged into")]  
         public void GivenIAmLoggedIn() 
         {
-            loginPage.navigateToLoginPage();
-            //loginPage.login(null, null);
+            loginPage.login(null, null);
             Console.WriteLine("I am logged in");
         }
          [Given(@"I click on the skills tab")]

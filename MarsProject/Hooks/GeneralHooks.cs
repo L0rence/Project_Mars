@@ -10,7 +10,7 @@ namespace MarsProject.Hooks
     public class GeneralHooks
     {
         private static ScenarioContext scenarioContextObject;
-        private static FeatureContext featureContext;
+       //private static FeatureContext featureContext;
         private static ExtentReports extentReports;
         private static ExtentHtmlReporter htmlReporter;
         private static ExtentTest feature;

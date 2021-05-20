@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using MarsProject.Utilities;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
@@ -60,18 +61,18 @@ namespace MarsProject.Pages
         public void enter_Language()
         {
             enterLanguage.SendKeys("English");
-            Thread.Sleep(500);
+            Wait.ElementExists(driver,"XPath", "enterLanguage", 10);
         }
         public void dropDown_lang_list()
         {
             languageDropdown.Click();
-            Thread.Sleep(500);
+            Wait.ElementExists(driver, "XPath", "languageDropdown", 10);
         }
 
         public void Save_Language()
         {
             saveLanguage.Click();
-            Thread.Sleep(500);
+            Wait.ElementExists(driver, "XPath", "saveLanguage", 10);
         }
         public bool validateLanguage_created()
         {
@@ -94,12 +95,12 @@ namespace MarsProject.Pages
         public void clickEditLanguage()
         {
             clickEditBtnLang.Click();
-            Thread.Sleep(1000);
+            Wait.ElementExists(driver, "XPath", "clickEditBtnLang", 10);
         }
         public void editLanguage()
         {
             editLang.SendKeys("Tamilan da");
-            Thread.Sleep(1000);
+            Wait.ElementExists(driver, "XPath", "editLang", 10);
             dropDown_edit_Lang.Click();
 
         }
@@ -113,7 +114,7 @@ namespace MarsProject.Pages
         public void update_Btn_Language()
         {
             updateBtnLang.Click();
-            Thread.Sleep(1000);
+            Wait.ElementExists(driver, "XPath", "updateBtnLang", 10);
         }
         public bool validateUpdate_Lang()
         {

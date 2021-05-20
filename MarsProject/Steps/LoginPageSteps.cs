@@ -13,7 +13,7 @@ namespace MarsProject.Steps
     {
         // Intialize webdriver 
         private readonly IWebDriver driver;
-         private LoginPage loginPage;  // Login Page take the driver 
+        private LoginPage loginPage;  // Login Page take the driver 
 
         // Create a Constructor 
         public LoginPageSteps()
@@ -23,7 +23,7 @@ namespace MarsProject.Steps
            //driver = new FirefoxDriver();
             driver = new ChromeDriver();
             loginPage = new LoginPage(driver);
-         }
+        }
 
         [AfterScenario]
         public void RunAfterEveryTest()
@@ -36,9 +36,7 @@ namespace MarsProject.Steps
         [Given(@"I am at the login page")]
         public void GivenIAmAtTheLoginPage()
         {
-            //LoginPage loginPage = new LoginPage(driver);
-              loginPage.navigateToLoginPage();
-             
+            loginPage.navigateToLoginPage();
             Console.WriteLine("I am at the login page"); 
         }
 

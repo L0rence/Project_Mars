@@ -37,9 +37,8 @@ namespace MarsProject.Steps
         //############## CREATE Education ######################
         [Given("I have logged in")]
         public void GivenIHaveLoggedIn()
-        {
-            loginPage.navigateToLoginPage();
-            //loginPage.login(null, null);
+        { 
+            loginPage.login(null, null);
             Console.WriteLine("I have logged in");
         }
         [Given("I click on the education tab")]

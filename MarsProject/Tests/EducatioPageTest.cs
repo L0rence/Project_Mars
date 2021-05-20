@@ -25,7 +25,7 @@ namespace MarsProject.Tests
        //}
 
         [Test]
-        public void createEducatioTest(IWebDriver driver)
+        public void createEducatioTest()
         {
 
             // Profile Objects
@@ -38,7 +38,7 @@ namespace MarsProject.Tests
         }
 
         [Test]
-        public void updateEducatioTest(IWebDriver driver)
+        public void updateEducatioTest()
         {
 
             // Profile Objects
@@ -51,7 +51,7 @@ namespace MarsProject.Tests
         }
 
         [Test]
-        public void deleteEducatioTest(IWebDriver driver)
+        public void deleteEducatioTest()
         {
 
             // Profile Objects

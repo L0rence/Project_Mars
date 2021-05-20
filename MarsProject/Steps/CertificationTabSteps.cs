@@ -37,9 +37,8 @@ namespace MarsProject.Steps
         [Given(@"I have logged into")]
         public void GivenIHaveLoggedInto()
         {
-            //loginPage.login(null, null);
-            loginPage.navigateToLoginPage();
-            Console.WriteLine("I have logged into");
+             loginPage.login(null, null);
+             Console.WriteLine("I have logged into");
             
         }
         [Given(@"I have click on the certification tab")]

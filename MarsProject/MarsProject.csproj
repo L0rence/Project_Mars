@@ -50,6 +50,11 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CertificationPage.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="FeatureFiles\DescriptionPage.feature">
+      <Visible>False</Visible>
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DescriptionPage.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="FeatureFiles\EducationPage.feature.cs">
